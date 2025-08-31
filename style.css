@@ -1,0 +1,154 @@
+/* makes the menu background black */
+div.scrollmenu {
+  background-color: #0000ff;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+/* makes the link text white and centred */
+div.scrollmenu a {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* makes the link background change to grey when mouse over */
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+*{font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+img{
+  width: 100%;
+  height:fit-content;
+  position: center;
+}
+
+image{
+  background-image: url("Whare Pictures/image (11) edited.png");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-text{
+  color: #00ffff;
+  position: absolute;
+  text-align: center;
+  top: 420px;
+  width: 100%;
+  font-size: 4rem;
+}
+
+.two-column{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-row-start: 5px;
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.info{
+  font-size: 1.3rem;
+}
+
+.image2{
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300px;
+}
+
+.box{
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: absolute;
+}
+
+/* Hide the images by default */
+.Gallery {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: rgb(39, 216, 192);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 2px 2px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 14%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}

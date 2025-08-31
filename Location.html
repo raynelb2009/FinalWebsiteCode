@@ -1,0 +1,111 @@
+<!-- heading start -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- menu start -->
+    <section><menu>
+      <div class="scrollmenu">
+        <a href="index3.html">Home Page</a>
+        <a href="The House that James Adorned.html">The House that James Adorned</a>
+        <a href="Location.html">Location</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="He Titi, e Rere.html">He Titi, e Rere</a>
+      </div>
+    </menu></section> 
+  <section>
+    <h>
+      Te Whanganui a Hei Whitianga
+    </h>
+    <p>
+      Whare Coordinates: 36°50'27.8"S 175°41'53.1"E
+    </p>
+  </section>
+   <!-- Container for the image gallery -->
+   <body>
+    <div class="container">
+      <!-- Full-width images with number text -->
+      <div class="mySlides">
+         <div class="numbertext">1 / 4</div>
+           <img src="WharePictures/Screenshot2025-07-03123520.png" style="width:100%" alt="World Picture">
+       </div>
+ 
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+          <img src="WharePictures/Screenshot2025-07-03123637.png" style="width:100%" alt="NZ Picture">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+          <img src="WharePictures/Screenshot2025-07-03140723.png" style="width:100%" alt="Whitianga Picture">
+      </div>
+  
+      
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+          <img src="WharePictures/Screenshot2025-08-14092053.png" style="width:100%" alt="Whare Location">
+      </div>
+   
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail images -->
+       <div class="row">
+         <div class="column">
+           <img class="demo cursor" src="WharePictures/Screenshot2025-07-03123520.png" style="width:100%" onclick="currentSlide(1)" alt="World Picture">
+         </div>
+         <div class="column">
+           <img class="demo cursor" src="WharePictures/Screenshot2025-07-03123637.png" style="width:100%" onclick="currentSlide(2)" alt="NZ Picture">
+         </div>
+         <div class="column">
+           <img class="demo cursor" src="WharePictures/Screenshot2025-07-03140723.png" style="width:100%" onclick="currentSlide(3)" alt="Whitianga Picture">
+         </div>
+         <div class="column">
+          <img class="demo cursor" src="WharePictures/Screenshot2025-08-14092053.png" style="width:100%" onclick="currentSlide(4)" alt="Whare Location">
+        </div>
+     
+      </div>
+    </div>
+    <script>
+       let slideIndex = 1;
+         showSlides(slideIndex);
+   
+       // Next/previous controls
+       function plusSlides(n) {
+         showSlides(slideIndex += n);
+       }
+   
+       // Thumbnail image controls
+       function currentSlide(n) {
+         showSlides(slideIndex = n);
+       }
+   
+       function showSlides(n) {
+         let i;
+         let slides = document.getElementsByClassName("mySlides");
+         let dots = document.getElementsByClassName("demo");
+         let captionText = document.getElementById("caption");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";
+         }
+         for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+         captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+     </script>
+  </body>
+</html>
